@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/ui/styles/globals.css";
-import { inter } from "./ui/fonts";
+import { inter, marcellus_sc, red_rose } from "./ui/fonts";
+import Navbar from "./ui/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Starbucks Coffee",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} ${red_rose.variable} ${marcellus_sc.variable}`}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

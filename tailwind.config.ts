@@ -16,7 +16,8 @@ const config: Config = {
       headline: "clamp(2rem, 4vw + 1rem, 4rem)",
       subheadline: "clamp(1.85rem, 4vw + 1rem, 3.25rem)",
       title: "clamp(1.5rem, 4vw + 1rem, 2.5rem)",
-      main: "clamp(1rem, 2vw + 1rem, 1.215rem)",
+      main: "clamp(1rem, 1vw + 1rem, 1.0125rem)",
+      small: "clamp(.8125rem, 1vw + 1rem, .9rem)",
     },
     extend: {
       backgroundImage: {

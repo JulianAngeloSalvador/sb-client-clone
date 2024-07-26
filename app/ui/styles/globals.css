@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-secondary text-main font-red-rose;
+  }
+
+  h1 {
+    @apply text-headline;
+  }
+
+  h2 {
+    @apply text-subheadline;
+  }
+
+  h3 {
+    @apply text-title font-marcellus-sc;
+  }
+}

@@ -1,6 +1,10 @@
 export interface ContentContainer {
   headline: React.ReactNode;
-  subheadline?: string;
+  subheadline?: React.ReactNode;
   main: React.ReactNode;
   footer?: React.ReactNode;
+}
+
+export interface Fields {
+  [key: string]: string;
 }

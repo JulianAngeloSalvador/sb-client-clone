@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -15,9 +16,15 @@ const config: Config = {
     fontSize: {
       headline: "clamp(2rem, 4vw + 1rem, 4rem)",
       subheadline: "clamp(1.85rem, 4vw + 1rem, 3.25rem)",
-      title: "clamp(1.5rem, 4vw + 1rem, 2.5rem)",
+      title: "clamp(1.35rem, 4vw + 1rem, 1.75rem)",
       main: "clamp(1rem, 1vw + 1rem, 1.0125rem)",
       small: "clamp(.8125rem, 1vw + 1rem, .9rem)",
+    },
+    fontWeight: {
+      DEFAULT: "300",
+      semibold: "500",
+      bold: "700",
+      extrabold: "900",
     },
     extend: {
       backgroundImage: {
@@ -32,10 +39,15 @@ const config: Config = {
       },
       fontFamily: {
         "red-rose": ["var(--font-red-rose)"],
-        "marcellus-sc": ["var(--font-marcellus-sc)"],
+        lato: ["var(--font-lato)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant("children", "&>*");
+    }),
+  ],
 };
 export default config;

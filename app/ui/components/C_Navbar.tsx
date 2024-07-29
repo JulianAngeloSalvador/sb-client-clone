@@ -15,10 +15,10 @@ export default function C_Navbar({
   return (
     <nav
       className={clsx(
-        `fixed top-0 left-0 w-full py-4 px-8 flex items-center justify-between ${className}`,
+        `fixed top-0 left-0 w-full py-4 px-8 items-center justify-between ${className}`,
         {
-          "-translate-y-full": atAuth,
-          "translate-y-0": !atAuth,
+          hidden: atAuth,
+          flex: !atAuth,
         }
       )}
     >
